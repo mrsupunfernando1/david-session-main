@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SUPUN MD V1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161616;
+  overflow: hidden;
+  /* transform: scale(1.5); */
+}
+
+/* button */
+.btn {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+
+  <button onclick="window.open(`/wasiqr`)" class="btn">QR Code</button>
+  <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
+  <button onclick="window.open(`https://github.com/deeceexxx/Queen_Anita-V2`)" class="btn">Bot Repo</button>
+  <button onclick="window.open(`https://wa.me/+94718461889?text=𝖬𝗋.𝖲𝗎𝗉𝗎𝗇_𝖥𝖾𝗋𝗇𝖺𝗇𝖽𝗈|🐣💕🔗🌸`)" class="btn">Contact Me</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029VaXRYlrKwqSMF7Tswi38`)" class="btn">Wa Channel</button>
+  <button onclick="window.open(`https://youtube.com/@darkshadow_modz`)" class="btn">Youtube</button>
+  
+
+</body>
+</html> 
